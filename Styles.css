@@ -41,6 +41,7 @@ h1 {
   width: 100%;
   padding: 1rem;
   border-radius: 1rem;
+  border: none;
   font-size: 1.5rem;
 }
 
@@ -73,6 +74,7 @@ h1 {
 
 .btn {
   width: 40%;
+  border: none;
   border-radius: 1rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
