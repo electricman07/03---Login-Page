@@ -97,3 +97,12 @@ h1 {
   color: white;
   cursor: pointer;
 }
+
+.btn-reset {
+  background-color: aliceblue;
+}
+
+.btn-reset:hover {
+  background-color: aquamarine;
+  cursor: pointer;
+}
