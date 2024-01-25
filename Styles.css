@@ -78,6 +78,7 @@ h1 {
   border-radius: 1rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  font-size: 1.5rem;
 }
 
 .buttons-container {
@@ -85,4 +86,14 @@ h1 {
   justify-content: space-around;
   margin-left: 1rem;
   margin-right: 1rem;
+}
+
+.btn-login {
+  background-color: darkgray;
+}
+
+.btn-login:hover {
+  background-color: darkslategray;
+  color: white;
+  cursor: pointer;
 }
