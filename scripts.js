@@ -4,6 +4,13 @@ const password = document.querySelector("#password");
 const terms = document.querySelector("#terms");
 const btnLogin = document.querySelector(".btn-login");
 const btnReset = document.querySelector(".btn-reset");
+const inputContainer = document.querySelector(".input-container");
+
+//  add event listener to submit
+form.addEventListener("submit", function (e) {
+  // prevent the form from submitting
+  e.preventDefault();
+});
 
 // check if form values are completed
 const isRequired = (value) => (value === "" ? false : true);
