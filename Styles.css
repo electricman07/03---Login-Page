@@ -49,8 +49,9 @@ h1 {
 }
 
 #terms {
+  width: auto;
   /* vertical-align: top; */
-  display: inline-block;
+  /* display: inline-block; */
 }
 
 .star {
