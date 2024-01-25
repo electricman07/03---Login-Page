@@ -1,10 +1,10 @@
-const name = document.querySelector("#name");
+const email = document.querySelector("#email");
 const username = document.querySelector("#username");
 const password = document.querySelector("#password");
 const terms = document.querySelector("#terms");
 const btnLogin = document.querySelector(".btn-login");
 const btnReset = document.querySelector(".btn-reset");
-const inputContainer = document.querySelector(".input-container");
+const form = document.querySelector(".form");
 
 //  add event listener to submit
 form.addEventListener("submit", function (e) {
@@ -53,4 +53,25 @@ const showSuccess = (input) => {
   // hide the error message
   const error = formField.querySelector("small");
   error.textContent = "";
+};
+
+// validate the username field
+const checkUsername = () => {
+  let valid = false;
+  const min = 3;
+  const max = 25;
+  const username = username.value.trim();
+
+  if (!isRequired(username)) {
+    showError(username, "Username cannot be blank.");
+  } else if (!isBetween(username.length, min, max)) {
+    showError(
+      username,
+      `Username must be between ${min} and ${max} characters.`
+    );
+  } else {
+    showSuccess(username);
+    valid = true;
+  }
+  return valid;
 };
