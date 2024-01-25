@@ -31,3 +31,16 @@ h1 {
   padding: 1rem;
   border-radius: 1rem;
 }
+
+.input-container label {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.star {
+  color: red;
+  padding-left: 1rem;
+
+  font-size: 1rem;
+}
