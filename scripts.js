@@ -40,3 +40,17 @@ const showError = (input, message) => {
   const error = formField.querySelector("small");
   error.textContent = message;
 };
+
+// show success
+const showSuccess = (input) => {
+  // get the form-field element
+  const formField = input.parentElement;
+
+  // remove the error class
+  formField.classList.remove("error");
+  formField.classList.add("success");
+
+  // hide the error message
+  const error = formField.querySelector("small");
+  error.textContent = "";
+};
