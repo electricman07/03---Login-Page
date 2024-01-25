@@ -6,6 +6,12 @@ const btnLogin = document.querySelector(".btn-login");
 const btnReset = document.querySelector(".btn-reset");
 const form = document.querySelector(".form");
 
+// add reset functionality
+btnReset.addEventListener("click", function (e) {
+  e.preventDefault();
+  // reset elements
+  form.reset();
+});
 //  add event listener to submit
 form.addEventListener("submit", function (e) {
   // prevent the form from submitting
