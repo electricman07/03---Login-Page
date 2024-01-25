@@ -1,6 +1,6 @@
-const email = document.querySelector("#email");
-const username = document.querySelector("#username");
-const password = document.querySelector("#password");
+const emailEl = document.querySelector("#email");
+const usernameEl = document.querySelector("#username");
+const passwordEl = document.querySelector("#password");
 const terms = document.querySelector("#terms");
 const btnLogin = document.querySelector(".btn-login");
 const btnReset = document.querySelector(".btn-reset");
@@ -60,17 +60,32 @@ const checkUsername = () => {
   let valid = false;
   const min = 3;
   const max = 25;
-  const username = username.value.trim();
+  const username = usernameEl.value.trim();
 
   if (!isRequired(username)) {
-    showError(username, "Username cannot be blank.");
+    showError(usernameEl, "Username cannot be blank.");
   } else if (!isBetween(username.length, min, max)) {
     showError(
-      username,
+      usernameEl,
       `Username must be between ${min} and ${max} characters.`
     );
   } else {
-    showSuccess(username);
+    showSuccess(usernameEl);
+    valid = true;
+  }
+  return valid;
+};
+
+//Check the email field
+const checkEmail = () => {
+  let valid = false;
+  const email = emailEl.value.trim();
+  if (!isRequired(email)) {
+    showError(emailEl, "Email cannot be blank.");
+  } else if (!isEmailValid(email)) {
+    showError(emailEl, "Email is not valid.");
+  } else {
+    showSuccess(emailEl);
     valid = true;
   }
   return valid;
